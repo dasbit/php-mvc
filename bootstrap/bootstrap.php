@@ -6,7 +6,7 @@ require 'constants.php';
  * Checks .env file
  */
 
-if(!file_exists('../.env'))
+if(!file_exists(BASE_PATH . '/.env'))
 {
     die('.env not exists');
 
@@ -71,8 +71,3 @@ $capsule->bootEloquent();
  * Starting session
  */
 session_start();
-
-/**
- * Routing
- */
-require 'routes.php';
