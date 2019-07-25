@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use Core\Auth;
 use \Core\View;
 
 /**
@@ -9,9 +10,8 @@ use \Core\View;
  *
  * PHP version 7.0
  */
-class Home extends \Core\Controller
+class Main extends \Core\Controller
 {
-
     /**
      * Show the index page
      *
@@ -19,6 +19,23 @@ class Home extends \Core\Controller
      */
     public function indexAction()
     {
-        View::renderTemplate('Home/index.html');
+        View::renderTemplate('Main/index.html');
+    }
+
+    /**
+     * Shows logged page
+     */
+    public function loggedAction()
+    {
+        if (!Auth::isLoggedIn()){
+            header('Location: '. app_url('login'));
+        }
+
+        View::renderTemplate('Main/logged.html');
+    }
+
+    public function loginAction()
+    {
+        View::renderTemplate('Main/logged.html');
     }
 }

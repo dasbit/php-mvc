@@ -1,6 +1,11 @@
 {
+    "name": "dasbit/testmvc",
+    "description":"Testing simple mvc app, Fork from https://github.com/daveh/php-mvc",
     "require": {
-        "twig/twig": "~2.0"
+        "twig/twig": "~2.0",
+        "vlucas/phpdotenv": "^3.4",
+        "illuminate/database": "^5.8",
+        "pmill/php-auth": "^0.2.3"
     },
     "autoload": {
         "psr-4": {

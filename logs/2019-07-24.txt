@@ -1,0 +1,62 @@
+[24-Jul-2019 13:03:37 UTC] Uncaught exception: 'Error' with message 'Class 'Dotenv\Dotenv\Dotenv' not found'
+Stack trace: #0 /home/vagrant/code/test-mvc/public/index.php(6): require()
+#1 {main}
+Thrown in '/home/vagrant/code/test-mvc/bootstrap/bootstrap.php' on line 37
+[24-Jul-2019 13:03:48 UTC] Uncaught exception: 'Error' with message 'Class 'Dotenv\Dotenv\Dotenv' not found'
+Stack trace: #0 /home/vagrant/code/test-mvc/public/index.php(6): require()
+#1 {main}
+Thrown in '/home/vagrant/code/test-mvc/bootstrap/bootstrap.php' on line 37
+[24-Jul-2019 13:03:50 UTC] Uncaught exception: 'Error' with message 'Class 'Dotenv\Dotenv\Dotenv' not found'
+Stack trace: #0 /home/vagrant/code/test-mvc/public/index.php(6): require()
+#1 {main}
+Thrown in '/home/vagrant/code/test-mvc/bootstrap/bootstrap.php' on line 37
+[24-Jul-2019 13:03:50 UTC] Uncaught exception: 'Error' with message 'Class 'Dotenv\Dotenv\Dotenv' not found'
+Stack trace: #0 /home/vagrant/code/test-mvc/public/index.php(6): require()
+#1 {main}
+Thrown in '/home/vagrant/code/test-mvc/bootstrap/bootstrap.php' on line 37
+[24-Jul-2019 13:03:51 UTC] Uncaught exception: 'Error' with message 'Class 'Dotenv\Dotenv\Dotenv' not found'
+Stack trace: #0 /home/vagrant/code/test-mvc/public/index.php(6): require()
+#1 {main}
+Thrown in '/home/vagrant/code/test-mvc/bootstrap/bootstrap.php' on line 37
+[24-Jul-2019 13:42:14 UTC] Uncaught exception: 'Illuminate\Database\QueryException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) (SQL: create table `users` (`id` int unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `password` varchar(255) not null, `created_at` timestamp null, `updated_at` timestamp null))'
+Stack trace: #0 /home/vagrant/code/test-mvc/vendor/illuminate/database/Connection.php(624): Illuminate\Database\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#1 /home/vagrant/code/test-mvc/vendor/illuminate/database/Connection.php(459): Illuminate\Database\Connection->run('create table `u...', Array, Object(Closure))
+#2 /home/vagrant/code/test-mvc/vendor/illuminate/database/Schema/Blueprint.php(97): Illuminate\Database\Connection->statement('create table `u...')
+#3 /home/vagrant/code/test-mvc/vendor/illuminate/database/Schema/Builder.php(278): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /home/vagrant/code/test-mvc/vendor/illuminate/database/Schema/Builder.php(167): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /home/vagrant/code/test-mvc/database/migrations.php(18): Illuminate\Database\Schema\Builder->create('users', Object(Closure))
+#6 {main}
+Thrown in '/home/vagrant/code/test-mvc/vendor/illuminate/database/Connection.php' on line 664
+[24-Jul-2019 13:43:16 UTC] Uncaught exception: 'Illuminate\Database\QueryException' with message 'Database hosts array is empty. (SQL: create table `users` (`id` int unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `password` varchar(255) not null, `created_at` timestamp null, `updated_at` timestamp null))'
+Stack trace: #0 /home/vagrant/code/test-mvc/vendor/illuminate/database/Connection.php(624): Illuminate\Database\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#1 /home/vagrant/code/test-mvc/vendor/illuminate/database/Connection.php(459): Illuminate\Database\Connection->run('create table `u...', Array, Object(Closure))
+#2 /home/vagrant/code/test-mvc/vendor/illuminate/database/Schema/Blueprint.php(97): Illuminate\Database\Connection->statement('create table `u...')
+#3 /home/vagrant/code/test-mvc/vendor/illuminate/database/Schema/Builder.php(278): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /home/vagrant/code/test-mvc/vendor/illuminate/database/Schema/Builder.php(167): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /home/vagrant/code/test-mvc/database/migrations.php(18): Illuminate\Database\Schema\Builder->create('users', Object(Closure))
+#6 {main}
+Thrown in '/home/vagrant/code/test-mvc/vendor/illuminate/database/Connection.php' on line 664
+[24-Jul-2019 13:44:16 UTC] Uncaught exception: 'Error' with message 'Class 'Dotenv\Dotenv\Dotenv' not found'
+Stack trace: #0 /home/vagrant/code/test-mvc/database/migrations.php(3): require()
+#1 {main}
+Thrown in '/home/vagrant/code/test-mvc/bootstrap/bootstrap.php' on line 40
+[24-Jul-2019 13:44:29 UTC] Uncaught exception: 'Error' with message 'Class 'Dotenv\Dotenv\Dotenv' not found'
+Stack trace: #0 /home/vagrant/code/test-mvc/database/migrations.php(3): require()
+#1 {main}
+Thrown in '/home/vagrant/code/test-mvc/bootstrap/bootstrap.php' on line 40
+[24-Jul-2019 13:46:00 UTC] Uncaught exception: 'Dotenv\Exception\InvalidPathException' with message 'Unable to read any of the environment file(s) at [/home/vagrant/code/test-mvc/bootstrap/myconfig].'
+Stack trace: #0 /home/vagrant/code/test-mvc/vendor/vlucas/phpdotenv/src/Loader.php(91): Dotenv\Loader::findAndRead(Array)
+#1 /home/vagrant/code/test-mvc/vendor/vlucas/phpdotenv/src/Dotenv.php(123): Dotenv\Loader->load()
+#2 /home/vagrant/code/test-mvc/vendor/vlucas/phpdotenv/src/Dotenv.php(80): Dotenv\Dotenv->loadData()
+#3 /home/vagrant/code/test-mvc/bootstrap/bootstrap.php(36): Dotenv\Dotenv->load()
+#4 /home/vagrant/code/test-mvc/database/migrations.php(3): require('/home/vagrant/c...')
+#5 {main}
+Thrown in '/home/vagrant/code/test-mvc/vendor/vlucas/phpdotenv/src/Loader.php' on line 133
+[24-Jul-2019 13:46:07 UTC] Uncaught exception: 'Dotenv\Exception\InvalidPathException' with message 'Unable to read any of the environment file(s) at [/home/vagrant/code/test-mvc/bootstrap/myconfig].'
+Stack trace: #0 /home/vagrant/code/test-mvc/vendor/vlucas/phpdotenv/src/Loader.php(91): Dotenv\Loader::findAndRead(Array)
+#1 /home/vagrant/code/test-mvc/vendor/vlucas/phpdotenv/src/Dotenv.php(123): Dotenv\Loader->load()
+#2 /home/vagrant/code/test-mvc/vendor/vlucas/phpdotenv/src/Dotenv.php(80): Dotenv\Dotenv->loadData()
+#3 /home/vagrant/code/test-mvc/bootstrap/bootstrap.php(36): Dotenv\Dotenv->load()
+#4 /home/vagrant/code/test-mvc/database/migrations.php(3): require('/home/vagrant/c...')
+#5 {main}
+Thrown in '/home/vagrant/code/test-mvc/vendor/vlucas/phpdotenv/src/Loader.php' on line 133

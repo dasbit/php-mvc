@@ -2,25 +2,49 @@
 
 namespace App\Models;
 
-use PDO;
+use Illuminate\Database\Eloquent\Model;
+use pmill\Auth\Interfaces\AuthUser;
+use pmill\Auth\Password;
 
 /**
- * Example user model
+ * User
  *
- * PHP version 7.0
+ * @package App\Models
  */
-class User extends \Core\Model
+class User extends Model implements AuthUser
 {
+    protected $fillable = [
+        'name', 'email', 'password'
+    ];
 
-    /**
-     * Get all the users as an associative array
-     *
-     * @return array
-     */
-    public static function getAll()
+    public function setPassword($password)
     {
-        $db = static::getDB();
-        $stmt = $db->query('SELECT id, name FROM users');
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $passwordHelper = new Password();
+        $this->password = $passwordHelper->hash($password);
+    }
+
+    public function setPasswordAttribute($password)
+    {
+        $this->setPassword($password);
+    }
+
+    public function getAuthId()
+    {
+        return $this->id;
+    }
+
+    public function getTwoFactorSecret()
+    {
+        return 'not realized';
+    }
+
+    public function getAuthPassword()
+    {
+        return $this->password;
+    }
+
+    public function getAuthUsername()
+    {
+        return $this->name;
     }
 }
